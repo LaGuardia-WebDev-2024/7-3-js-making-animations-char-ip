@@ -5,6 +5,7 @@ void setup() {
 
 //🎯Variable Declarations Go Here
 var sunSize = 30; 
+var x = 10;
 
 
 //🟢Draw Function - Runs on Repeat
@@ -18,14 +19,21 @@ draw = function(){
   fill(255, 204, 0);
   ellipse(200, 298, sunSize, sunSize);
 
+  sunSize = sunSize + 1
+  if (sunSize > 250){
+   sunSize = sunSize + 20
+  } 
+
   // The land, blocking half of the sun
   fill(76, 168, 67);
   rect(0, 300, 400, 100);
   
   //ladybug
   fill(200,0,0);
-  ellipse(10, 350, 10, 10);
+  ellipse(x, 350, 10, 10);
+x = x + 5;
 }
+
 
 
 //🟡Extra FUN Features Ms. Hall Added
